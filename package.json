@@ -1,5 +1,5 @@
 {
-  "name": "tradermade-nodejs-sdk",
+  "name": "tradermade-sdk",
   "version": "1.0.0",
   "description": "Official TRADERMADE Node.js SDK",
   "main": "index.js",

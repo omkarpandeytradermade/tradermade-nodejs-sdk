@@ -7,7 +7,7 @@ Official Node.js client library for the TraderMade Data API.
 Install the package via npm:
 
 ```bash
-npm install tradermade-nodejs-sdk
+npm install tradermade-sdk
 
 ```
 
@@ -16,7 +16,7 @@ npm install tradermade-nodejs-sdk
 First, import the library and initialize the client with your API key.
 
 ```javascript
-import TraderMade from 'tradermade-nodejs-sdk';
+import TraderMade from 'tradermade-sdk';
 
 const tm = new TraderMade();
 tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
@@ -34,7 +34,7 @@ After creating the client, making calls to the TraderMade API is easy. Below are
 Fetch raw tick data for a specific currency pair and time range.
 
 ```javascript
-import TraderMade from 'tradermade-nodejs-sdk';
+import TraderMade from 'tradermade-sdk';
 
 const tm = new TraderMade();
 tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
@@ -61,7 +61,7 @@ example_GetHistoricalTickData();
 Retrieve OHLC (Open, High, Low, Close) data for a specific minute.
 
 ```javascript
-import TraderMade from 'tradermade-nodejs-sdk';
+import TraderMade from 'tradermade-sdk';
 
 const tm = new TraderMade();
 tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
@@ -87,7 +87,7 @@ example_GetMinuteHistoricalData();
 Fetch daily time series data for analysis.
 
 ```javascript
-import TraderMade from 'tradermade-nodejs-sdk';
+import TraderMade from 'tradermade-sdk';
 
 const tm = new TraderMade();
 tm.setRestApiKey(process.env.TRADERMADE_API_KEY);

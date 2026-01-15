@@ -1,0 +1,13 @@
+#Secrets
+.env
+
+# IDE files
+.vscode
+.git
+.github
+
+# Development
+tests
+examples
+node_modules
+

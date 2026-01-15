@@ -1,0 +1,14 @@
+# *node specific
+node_modules/
+
+# *IDE files
+.vscode
+
+#*!ENV file
+.env
+
+#TEST FILES
+tests
+examples from:-
+https://github.com/massive-com/client-js
+

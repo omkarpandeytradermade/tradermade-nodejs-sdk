@@ -1,0 +1,36 @@
+{
+  "name": "tradermade-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "Official TRADERMADE Node.js SDK",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    "tardermade.com",
+    "forex api",
+    "crypto api",
+    "api",
+    "sdk"
+  ],
+  "contributors": [
+    {
+      "name": "TraderMade Support",
+      "email": "support@tradermade.com"
+    }
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "tradermade-nodejs-sdk": "^1.0.0"
+  }
+}

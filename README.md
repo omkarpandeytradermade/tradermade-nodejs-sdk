@@ -1,6 +1,6 @@
-Here is the updated README with the link to the examples directory added.
+Here is the updated README. I have added the **Live Exchange Rates** example as the first item in the "Usage Examples" section, as it is the most common use case.
 
-I have placed the link at the beginning of the **Usage Examples** section so it is highly visible to anyone looking for more specific use cases.
+I also formatted the arguments in that example to be a single comma-separated string (e.g., `"GBPUSD,UK100,USDJPY"`), which ensures it works correctly with the SDK you defined.
 
 ```markdown
 # TraderMade Node.js SDK
@@ -60,9 +60,31 @@ tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
 ## 📚 Usage Examples
 
+> **Looking for more?** > For a comprehensive list of examples covering more endpoints and advanced usage, please refer to our **[GitHub Examples Directory](https://github.com/omkarpandeytradermade/tradermade-nodejs-sdk/tree/main/examples)**.
+
 After creating the client, making calls to the TraderMade API is easy. Below are examples for fetching different types of market data.
 
-### 1. Convert Currency
+### 1. Get Live Exchange Rates
+
+Fetch real-time data for multiple currencies or instruments at once.
+
+```javascript
+import TraderMade from "tradermade-sdk";
+
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
+
+async function example_GetLiveExchangeRates() {
+  // Pass multiple currencies as a comma-separated string
+  const data = await tm.getLiveExchangeRates("GBPUSD,UK100,USDJPY");
+  console.log(data);
+}
+
+example_GetLiveExchangeRates().catch(console.error);
+
+```
+
+### 2. Convert Currency
 
 Convert a specific amount from one currency to another using live exchange rates.
 
@@ -90,7 +112,7 @@ example_GetConvertCurrencyAmount().catch(console.error)
 
 ```
 
-### 2. Get Historical Tick Data
+### 3. Get Historical Tick Data
 
 Fetch raw tick data for a specific currency pair and time range.
 
@@ -117,7 +139,7 @@ example_GetHistoricalTickData();
 
 ```
 
-### 3. Get Time Series Data
+### 4. Get Time Series Data
 
 Fetch daily time series data for analysis.
 
@@ -146,5 +168,3 @@ async function example_GetTimeSeriesData() {
 example_GetTimeSeriesData();
 
 ```
-
-> **Looking for more?** > For a comprehensive list of examples covering more endpoints and advanced usage, please refer to our **[GitHub Examples Directory](https://github.com/omkarpandeytradermade/tradermade-nodejs-sdk/tree/main/examples)**.

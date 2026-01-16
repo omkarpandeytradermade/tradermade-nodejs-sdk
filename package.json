@@ -1,6 +1,6 @@
 {
-  "name": "tradermade-sdk",
-  "version": "1.0.0",
+  "name": "testingsdktm",
+  "version": "0.5.0",
   "description": "Official TRADERMADE Node.js SDK",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,6 @@
   "homepage": "",
   "dependencies": {
     "axios": "^1.13.2",
-    "dotenv": "^17.2.3",
-    "tradermade-nodejs-sdk": "^1.0.0"
+    "dotenv": "^17.2.3"
   }
 }

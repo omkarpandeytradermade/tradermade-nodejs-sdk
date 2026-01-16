@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { Client } from "./src/client.js";
 import {
   TIME_SERIES_FORMAT,

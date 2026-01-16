@@ -33,8 +33,13 @@ class TraderMade {
   }
 
   //Get Live Exchange Rates​
-  async getLiveExchangeRates() {
-    const data = await this.client.get("/live");
+  async getLiveExchangeRates(currency) {
+    if (!currency) {
+      throw new Error("currency is required.");
+    }
+    const data = await this.client.get("/live", {
+      currency,
+    });
     return data;
   }
 
@@ -107,7 +112,7 @@ class TraderMade {
   }
 
   //Get Historical Tick Data​
-  async getHistoricalTickData(symbol, startDate, endDate) {
+  async getHistoricalTickData(symbol, startDate, endDate, format) {
     if (!symbol || !startDate || !endDate) {
       throw new Error("symbol, startDate and endDate are required.");
     }
@@ -115,20 +120,20 @@ class TraderMade {
     const end = encodeURIComponent(endDate);
     const data = await this.client.get(
       `/tick_historical/${symbol}/${start}/${end}`,
-      { format: "json" }
+      { format }
     );
     return data;
   }
 
-  async getHistoricalTickDataSample(symbol, startDate, endDate) {
-    if (!symbol || !startDate || !endDate) {
+  async getHistoricalTickDataSample(symbol, startDate, endDate, format) {
+    if (!symbol || !startDate || !endDate || !format) {
       throw new Error("Symbol,startDateTime and endDateTime are required.");
     }
     const startDateAndTime = encodeURIComponent(startDate);
     const endDateAndTime = encodeURIComponent(endDate);
     const data = await this.client.get(
       `/tick_historical_sample/${symbol}/${startDateAndTime}/${endDateAndTime}`,
-      { format: "json" }
+      { format }
     );
     return data;
   }

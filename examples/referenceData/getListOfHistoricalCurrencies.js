@@ -1,9 +1,11 @@
-import tm from "../../lib/tradermade.js"
+import TraderMade from "tradermade-sdk";
 
-async function example_GetHistoricalCurrencyList(){
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
-    const data = await tm.getHistoricalCurrencyList()
-    console.log(data);
-};
+async function example_GetHistoricalCurrencyList() {
+  const data = await tm.getHistoricalCurrencyList();
+  console.log(data);
+}
 
-example_GetHistoricalCurrencyList().catch(console.error)
+example_GetHistoricalCurrencyList().catch(console.error);

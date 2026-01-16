@@ -1,9 +1,11 @@
-import tm from "../../lib/tradermade.js"
+import TraderMade from "tradermade-sdk";
 
-async function example_GetMarketOpenTiming(){
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
-    const data = await tm.getMarketOpenTiming();
-    console.log(JSON.stringify(data,null,2));
-};
+async function example_GetMarketOpenTiming() {
+  const data = await tm.getMarketOpenTiming();
+  console.log(JSON.stringify(data, null, 2));
+}
 
-example_GetMarketOpenTiming().catch(console.error)
+example_GetMarketOpenTiming().catch(console.error);

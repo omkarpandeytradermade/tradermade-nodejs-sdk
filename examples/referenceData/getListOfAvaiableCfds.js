@@ -1,9 +1,11 @@
-import tm from "../../lib/tradermade.js"
+import TraderMade from "tradermade-sdk";
 
-async function example_GetCfdList(){
-    
-    const data = await tm.getCfdList();
-    console.log(data);
-};
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
-example_GetCfdList().catch(console.error)
+async function example_GetCfdList() {
+  const data = await tm.getCfdList();
+  console.log(data);
+}
+
+example_GetCfdList().catch(console.error);

@@ -5,9 +5,11 @@
 .vscode
 .git
 .github
+.gitignore
 
 # Development
 tests
 examples
 node_modules
+lib
 

@@ -1,9 +1,11 @@
-import tm from "../../lib/tradermade.js"
+import TraderMade from "tradermade-sdk";
 
-async function example_GetCryptoList(){
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
-    const data = await tm.getCryptoList()
-    console.log(data);
-};
+async function example_GetCryptoList() {
+  const data = await tm.getCryptoList();
+  console.log(data);
+}
 
-example_GetCryptoList().catch(console.error)
+example_GetCryptoList().catch(console.error);

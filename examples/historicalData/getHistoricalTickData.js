@@ -1,13 +1,16 @@
-import tm from "../../lib/tradermade.js"
+import TraderMade from "tradermade-sdk";
 
-async function example_GetHistoricalTickData(){
+const tm = new TraderMade();
+tm.setRestApiKey(process.env.TRADERMADE_API_KEY);
 
-    const data = await tm.getHistoricalTickData(
-        "GBPUSD",
-        "2026-01-12 15:00",
-        "2026-01-12 15:30"
-    )
-    console.log(data);
-};
+async function example_GetHistoricalTickData() {
+  const data = await tm.getHistoricalTickData(
+    "GBPUSD",
+    "2026-01-12 15:00",
+    "2026-01-12 15:30",
+    "json"
+  );
+  console.log(data);
+}
 
-example_GetHistoricalTickData().catch(console.error)
+example_GetHistoricalTickData().catch(console.error);

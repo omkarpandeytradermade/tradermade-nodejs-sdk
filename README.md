@@ -1,3 +1,8 @@
+Here is the updated README with the link to the examples directory added.
+
+I have placed the link at the beginning of the **Usage Examples** section so it is highly visible to anyone looking for more specific use cases.
+
+```markdown
 # TraderMade Node.js SDK
 
 Official Node.js client library for the TraderMade Data API.
@@ -41,7 +46,7 @@ node index.js
 
 ## 🔑 Getting Started
 
-First, import the library and initialize the client. 
+First, import the library and initialize the client.
 
 ```javascript
 import TraderMade from "tradermade-sdk";
@@ -141,3 +146,5 @@ async function example_GetTimeSeriesData() {
 example_GetTimeSeriesData();
 
 ```
+
+> **Looking for more?** > For a comprehensive list of examples covering more endpoints and advanced usage, please refer to our **[GitHub Examples Directory](https://github.com/omkarpandeytradermade/tradermade-nodejs-sdk/tree/main/examples)**.
